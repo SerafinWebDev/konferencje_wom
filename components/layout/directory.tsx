@@ -82,6 +82,8 @@ export default function Directory({
             <p className="text-center text-gray-500">No results found</p>
           </div>
         )}
+
+        bubu
       </nav>
     </aside>
   );
