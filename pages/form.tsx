@@ -1,10 +1,18 @@
 'use server'
-import { Suspense } from 'react'
+import { Suspense } from 'react';
+import {
+    getAllUsers,
+    UserProps,
+    getUserCount,
+    getFirstUser,
+    addUser
+  } from '@/lib/api/user';
 
 import {CustomForm} from "@/components/form";
 
-export default  function CustomFormPage() {
+export default async function CustomFormPage() {
 
+    const clickHandler = async () => await addUser('Tedo', 'Testowy', 'mail@testy.pl');
 
 
   return (
