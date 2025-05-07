@@ -1,4 +1,3 @@
-'use server'
 import { Suspense } from 'react';
 import {
     getAllUsers,
@@ -10,16 +9,14 @@ import {
 
 import {CustomForm} from "@/components/form";
 
-export default async function CustomFormPage() {
+export default function CustomFormPage() {
 
-    const adding = async () => await addUser('Tedo', 'Testowy', 'mail@testy.pl');
+    const adding = () =>  addUser('Tedo', 'Testowy', 'mail@testy.pl');
 
 
   return (
     <div className="h-screen w-full flex justify-center items-center bg-black">
-      <Suspense fallback={<div>Loading...</div>}>
       <CustomForm adding={adding}/>
-    </Suspense>
     </div>
   );
 }
