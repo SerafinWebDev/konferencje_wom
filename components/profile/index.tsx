@@ -40,6 +40,9 @@ export default function Profile({
     setData(user);
   }
 
+    // const firstUser = await addUser('userName', 'secUserName', 'email');
+
+
   const [error, setError] = useState('');
   const settingsPage =
     settings ||

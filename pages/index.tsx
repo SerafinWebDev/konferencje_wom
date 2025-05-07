@@ -9,10 +9,7 @@ import {
 import { defaultMetaProps } from '@/components/layout/meta';
 import clientPromise from '@/lib/mongodb';
 
-export default async function Home({ user }: { user: UserProps }) {
-  const firstUser = await addUser('userName', 'secUserName', 'email');
-
-  
+export default function Home({ user }: { user: UserProps }) {
   return <Profile user={user} settings={false} />;
 }
 
@@ -36,6 +33,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const results = await getAllUsers();
   const totalUsers = await getUserCount();
   const firstUser = await getFirstUser();
+ const info = await addUser('userName', 'secUserName', 'email');
+ console.log(info)
 
   return {
     props: {
