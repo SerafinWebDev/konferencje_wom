@@ -1,4 +1,4 @@
-import { ResultProps, UserProps } from '@/lib/api/user';
+import { ResultProps, UserProps,addUser } from '@/lib/api/user';
 import Link from 'next/link';
 import useSWR from 'swr';
 import fetcher from '@/lib/fetcher';
@@ -83,8 +83,10 @@ export default function Directory({
           </div>
         )}
 
-        bubu
-      </nav>
+<button onClick={() => addUser('Tedo','Testowy','mail@testy.pl')}
+className="rounded-md bg-gradient-to-tr from-slate-800 to-slate-700 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+    Bubu
+  </button>      </nav>
     </aside>
   );
 }
