@@ -12,13 +12,13 @@ import {CustomForm} from "@/components/form";
 
 export default async function CustomFormPage() {
 
-    const clickHandler = async () => await addUser('Tedo', 'Testowy', 'mail@testy.pl');
+    const adding = async () => await addUser('Tedo', 'Testowy', 'mail@testy.pl');
 
 
   return (
     <div className="h-screen w-full flex justify-center items-center bg-black">
       <Suspense fallback={<div>Loading...</div>}>
-      <CustomForm />
+      <CustomForm adding={adding}/>
     </Suspense>
     </div>
   );
