@@ -8,7 +8,7 @@
 //   addUser
 // } from '@/lib/api/user';
 
-export const CustomForm = ({adding}) => {
+export const CustomForm = ({adding}:{adding:Function}) => {
 
   return (
     <div className="h-screen w-full flex justify-center items-center bg-black">
