@@ -1,3 +1,5 @@
+'use server'
+
 import clientPromise from '@/lib/mongodb';
 import { remark } from 'remark';
 import remarkMdx from 'remark-mdx';

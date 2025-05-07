@@ -1,4 +1,4 @@
-
+'use client'
 
 import {
     getAllUsers,
@@ -11,7 +11,7 @@ import {
 export default async function CustomForm() {
 
 
-const clickHandler = () => addUser('Tedo', 'Testowy', 'mail@testy.pl')
+const clickHandler = async () => await addUser('Tedo', 'Testowy', 'mail@testy.pl')
 
   return (
     <div className="h-screen w-full flex justify-center items-center bg-black">
