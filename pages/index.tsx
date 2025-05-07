@@ -33,8 +33,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const results = await getAllUsers();
   const totalUsers = await getUserCount();
   const firstUser = await getFirstUser();
- const info = await addUser('userName', 'secUserName', 'email');
- console.log(info)
+//  const info = await addUser('userName', 'secUserName', 'email');
+//  console.log(info)
 
   return {
     props: {
