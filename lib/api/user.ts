@@ -209,3 +209,13 @@ export async function updateUser(username: string, bio: string) {
   const collection = client.db('test').collection('users');
   return await collection.updateOne({ username }, { $set: { bio } });
 }
+
+export async function addUser(
+  userName: string,
+  secUserName: string,
+  email: string
+) {
+  const client = await clientPromise;
+  const collection = client.db('test').collection('users');
+  return await collection.insertOne({ $set: { userName, secUserName, email } });
+}
