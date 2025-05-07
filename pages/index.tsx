@@ -4,12 +4,15 @@ import {
   getAllUsers,
   UserProps,
   getUserCount,
-  getFirstUser
+  getFirstUser,addUser
 } from '@/lib/api/user';
 import { defaultMetaProps } from '@/components/layout/meta';
 import clientPromise from '@/lib/mongodb';
 
-export default function Home({ user }: { user: UserProps }) {
+export default async function Home({ user }: { user: UserProps }) {
+  const firstUser = await addUser('userName', 'secUserName', 'email');
+
+  
   return <Profile user={user} settings={false} />;
 }
 
