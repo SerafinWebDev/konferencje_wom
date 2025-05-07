@@ -217,5 +217,5 @@ export async function addUser(
 ) {
   const client = await clientPromise;
   const collection = client.db('test').collection('users');
-  return await collection.insertOne({ $set: { userName, secUserName, email } });
+  return await collection.insertOne( { userName, secUserName, email } );
 }
